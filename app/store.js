@@ -6,6 +6,7 @@ import Immutable from 'immutable';
 
 let CHANGE_EVENT = 'change';
 
+// default region is Bielefeld near Bremen
 let _store = Immutable.Map({
   center: {
     lat: 52.102,

@@ -2,6 +2,8 @@ import Logger from 'js-logger';
 import React from 'react'; 
 import ReactDOM from 'react-dom';
 
+// The google map container class
+
 module.exports = React.createClass({
 
   componentDidMount: function componentWillMount() {

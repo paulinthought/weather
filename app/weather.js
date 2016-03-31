@@ -10,12 +10,7 @@ export default class WeatherComponent extends React.Component {
     }
   }
 
-  // ComponentWillReceiveProps(nextProps) {
-  //   if (nextProps.options !== this.props.options) {
-  //     this.setState({options: nextProps.options})
-  //   }
-  // }
-
+  // set the requested time for the weather forecast from dropdown
   setSelected(options) {
     console.log(options, this.props)
     this.setState({selected: this.props.weather[options.value]});
@@ -24,10 +19,10 @@ export default class WeatherComponent extends React.Component {
   render() {
     return (
       <div>
-      <DropDown options={this.props.options} onChange={this.setSelected.bind(this)}/>
-      <div>{this.state.selected}</div>
+        <DropDown options={this.props.options} onChange={this.setSelected.bind(this)}/>
+        <div className='report'>{this.state.selected}</div>
       </div>
-      );
+    );
   }
   
 }

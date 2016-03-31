@@ -36,11 +36,11 @@ export default class App extends React.Component {
   	return ( 
       <div className='container'> 
         <div className='row'>
-          <div className='eight columns'>
-            {map}
-          </div>
           <div className='four columns'>
             <Weather options={this.state.options} weather={this.state.weather} />
+          </div>
+          <div className='eight columns'>
+            {map}
           </div>
         </div>
       </div>

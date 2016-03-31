@@ -2,6 +2,7 @@ import * as Constants from './constants';
 import Flux from '../dispatcher/AppDispatcher';
 import http from 'http';
 import Logger from 'js-logger';
+import moment from 'moment';
 
 export class Actions {
   
@@ -51,7 +52,7 @@ function getOptions(jsonweather) {
   jsonweather.list.forEach((item) => {
     weatherReport.push({
       value: item.dt_txt,
-      label: item.dt_txt
+      label: moment(item.dt_txt, 'YYYY-MM-DD HH:mm:ss').format('Do MMM H:mm')
     });
   });
   return weatherReport;
